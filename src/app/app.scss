@@ -1,0 +1,36 @@
+.page-size {
+  width: 4.5rem;
+}
+
+.search-control {
+  min-width: min(100%, 18rem);
+}
+
+.sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  background: transparent;
+  border: 0;
+}
+
+.sort-button span {
+  color: var(--bs-secondary-color);
+  font-size: 0.85em;
+}
+
+.sort-button:hover,
+.sort-button:focus-visible {
+  color: var(--bs-primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 575.98px) {
+  .search-control {
+    width: 100%;
+  }
+}
