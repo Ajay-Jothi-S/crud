@@ -1,59 +1,54 @@
-# Crud
+# User Management CRUD
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+Angular 21 user-management CRUD app styled with Bootstrap 5. It uses
+[JSONPlaceholder](https://jsonplaceholder.typicode.com/) as its demo API.
 
-## Development server
+## Prerequisites
 
-To start a local development server, run:
+- [Node.js](https://nodejs.org/) 20 or newer (LTS recommended)
+- npm (installed with Node.js)
+- Internet access to load JSONPlaceholder users
 
-```bash
-ng serve
-```
+## Setup
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Clone the repository and install the locked dependencies:
 
 ```bash
-ng generate component component-name
+git clone <repository-url>
+cd crud
+npm ci
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+If you do not have a lockfile available, use `npm install` instead.
+
+## Run locally
 
 ```bash
-ng generate --help
+npm start
 ```
 
-## Building
+Open `http://localhost:4200/` in a browser. The development server reloads
+when source files change.
 
-To build the project run:
+## Available commands
 
-```bash
-ng build
-```
+| Command | Purpose |
+| --- | --- |
+| `npm start` | Start the local Angular development server |
+| `npm test` | Run the Vitest unit tests |
+| `npm run build` | Create an optimized production build in `dist/` |
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Features
 
-## Running unit tests
+- Add, edit, and delete user records
+- Form validation for names, emails, contacts, and addresses
+- Global case-insensitive search
+- Sortable table columns
+- Pagination and page-size selection
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Demo API behavior
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+JSONPlaceholder returns 10 users and accepts CRUD requests, but does not
+persist writes. The application therefore updates its local in-browser state
+after adding, editing, or deleting a user. Refreshing the browser restores the
+original JSONPlaceholder data.
